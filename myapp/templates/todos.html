@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1> Todo List</h1>
+
+<ul>
+
+    <!-- todos here is a dictioary passed in from the VIEW render() method ..--> 
+    {% for todo in todos %}
+    <li>
+        <!-- Dobule curlys here to say its a variable and not html -->
+        {{ todo.title }}: {% if todo.completed %}Completed{% else %}Not Completed{% endif %}
+    </li>
+    {% endfor %}
+</ul>
+
+
+{% endblock %}
